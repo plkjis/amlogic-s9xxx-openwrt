@@ -236,9 +236,7 @@ on:
         default: "ophub"
         type: choice
         options:
-          - ophub
-          - angel
-          - yourname
+          - lee
 
 env:
   FEEDS_CONF: config/${{ inputs.source_branch }}/feeds.conf.default
