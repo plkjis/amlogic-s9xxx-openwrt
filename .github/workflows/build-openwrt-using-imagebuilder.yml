@@ -234,9 +234,7 @@ on:
         default: "ophub"
         type: choice
         options:
-          - ophub
-          - angel
-          - yourname
+          - lee
 
 env:
   TZ: Etc/UTC
