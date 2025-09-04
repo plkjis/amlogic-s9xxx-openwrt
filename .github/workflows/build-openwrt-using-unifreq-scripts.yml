@@ -167,7 +167,7 @@ jobs:
         working-directory: /builder
         if: ${{ steps.init.outputs.status }} == 'success' && !cancelled()
         run: |
-          armsr_tarfile_repo="ophub/amlogic-s9xxx-openwrt"
+          armsr_tarfile_repo="plkjis/build-openwrt-from-ophub"
           releases_tag_keywords="OpenWrt_lede_"
 
           armsr_tarfile_path="openwrt/output"
@@ -209,7 +209,7 @@ jobs:
           ln -sf /builder/${SELECT_PACKITPATH} /opt/${SELECT_PACKITPATH}
 
       - name: Packaging OpenWrt
-        uses: ophub/flippy-openwrt-actions@main
+        uses: plkjis/build-openwrt-from-ophub@main
         if: ${{ steps.down.outputs.status }} == 'success' && !cancelled()
         env:
           OPENWRT_ARMSR: openwrt/output/*rootfs.tar.gz
